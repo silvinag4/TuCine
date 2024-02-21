@@ -6,12 +6,16 @@ function registro(event) {
     const correo = document.getElementById("correo").value
     const password = document.getElementById("password").value
     const confirmarPassword = document.getElementById("confirmarPassword").value
-    const admin = false;
+    let admin = false;
     let carrito = [];
 
     const userData = JSON.parse(localStorage.getItem('userData')) || [];
 
     const isUserRegistered = userData.find(user => user.correo === correo)
+
+    if (correo == 'silvina@gmail.com') {
+        admin = true
+    }
 
     if (!username || !correo || !password || !confirmarPassword) {
         return alert('Debe completar todos los campos.');
