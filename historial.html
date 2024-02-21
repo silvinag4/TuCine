@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Compras</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center"> HISTORIAL DE COMPRAS</h2>
+        <hr>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Horario</th>
+                    <th>Total</th>
+                    <th>Fecha de compra</th>
+                </tr>
+            </thead>
+            <tbody id="tablaHistorialCompras">
+                <!-- Aquí se agregarán las filas de la tabla dinámicamente -->
+            </tbody>
+        </table>
+        <div class="text-center">
+            <button class="btn btn-danger" type="button" onClick="cerrarSesion()">Cerrar Sesión</button>
+            <button class="btn btn-secondary" type="button" onclick="homePage()" id="homePage">Inicio</button>
+            <button class="btn btn-primary" type="button" onclick="limpiarHistorial()" id="homePage">Limpiar</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS y jQuery (opcional, si se requiere para funcionalidades adicionales) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./cerrarSesion.js"></script>
+    <script src="historial.js">
+    </script>
+</body>
+
+</html>

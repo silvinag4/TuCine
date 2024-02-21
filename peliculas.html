@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h1 class="titulo text-center">STOCK DE PELÍCULAS</h1>
+        <hr>
+        <form id="stock" class="row g-3">
+            <div class="col-md-3">
+                <input class="form-control" type="number" id="idInput" placeholder="ID">
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="text" id="nombreInput" placeholder="Nombre">
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="text" id="precioInput" placeholder="Precio">
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="number" id="ticketsInput" placeholder="Tickets">
+            </div>
+            <div class="col-md-6 mt-3">
+                <input class="form-control" type="text" id="descripcionInput" placeholder="Descripción">
+            </div>
+            <div class="col-md-6 mt-3">
+                <input class="form-control" type="file" id="imagenInput" accept="image/*">
+            </div>
+            <div class="col-md-2 mt-3">
+                <button class="btn btn-primary" type="submit">Agregar Película</button>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control" type="datetime-local" id="funcion1">
+            </div>
+            <div class="col-md-2">
+                <input class="form-control" type="datetime-local" id="funcion2">
+            </div>
+        </form>
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Tickets</th>
+                    <th>Imagen</th>
+                    <th>Descripción</th>
+                    <th>Función 1</th>
+                    <th>Función 2</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tablaBody">
+
+            </tbody>
+        </table>
+        <div class="text-center">
+            <button class="btn btn-danger" type="button" onClick="cerrarSesion()">Cerrar Sesión</button>
+            <button class="btn btn-secondary" type="button" onclick="homePage()" id="homePage">Inicio</button>
+        </div>
+    </div>
+    <script src="./crudPelicula.js"></script>
+    <script src="./cerrarSesion.js"></script>
+</body>
+
+</html>

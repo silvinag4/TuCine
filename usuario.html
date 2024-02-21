@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body>
+    <main class="my-4">
+        <section class="container mt-5">
+            <h1 class="text-center">USUARIOS</h1>
+            <hr>
+            <form id="regFormulario" class="row g-3 mt-3">
+                <div class="col-md-2">
+                    <input class="form-control" type="text" placeholder="Nombre" id="nombreInput">
+                </div>
+                <div class="col-md-2">
+                    <input class="form-control" type="email" placeholder="Correo Electrónico" id="correoInput">
+                </div>
+                <div class="col-md-2">
+                    <input class="form-control" type="password" placeholder="Contraseña" id="contraInput">
+                </div>
+                <div class="col-md-2 mb-2">
+                    <div class="form-check p-0 text-center">
+                        <input class="form-check-input" type="checkbox" id="adminInput">
+                        <label class="form-check-label p-2" for="adminInput">ADMINISTRADOR</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <input class="d-none form-control" type="text" placeholder="Carrito" id="carritoInput" readonly>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary mt-2 col" type="submit" id="submitButton">Añadir</button>
+                </div>
+            </form>
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Contraseña</th>
+                        <th scope="col">Admin</th>
+                        <th scope="col">Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaBody">
+
+                </tbody>
+            </table>
+        </section>
+        <div class="container mt-3">
+            <button class="btn btn-secondary bg-danger" type="button" onclick="cerrarSesion()" id="sesionli">Cerrar
+                Sesión</button>
+            <button class="btn btn-secondary" type="button" onclick="homePage()" id="homePage">Inicio</button>
+        </div>
+    </main>
+    <script src="./crud.js"></script>
+    <script src="./cerrarSesion.js"></script>
+</body>
+
+</html>
